@@ -31,35 +31,24 @@ Clase: `controllers.LibroController`
 
 ---
 
-### 1️⃣ Método: `procesarConTreeSet(List<Book> libros)`
 
-🔹 **Objetivo**: Implementar este método para que retorne un conjunto ordenado de libros, eliminando duplicados según el criterio de orden.
 
-🔸 **Tipo de retorno**: `Set<Book>`
-
-💡 **Pista**: la estructura elegida debe garantizar orden automático y evitar duplicados según el criterio de orden.
-
----
-
-### 2️⃣ Método: `procesarConTreeMap(List<Book> libros)`
+###  Método: `procesarLibros(List<Book> libros)`
 
 🔹 **Objetivo**: Implementar este método para retornar un `Map<Book, Book>` donde cada libro es la clave y su mismo objeto el valor.
 
 🔸 **Tipo de retorno**: `Map<Book, Book>`
 
-💡 **Pista**: la estructura debe permitir mantener el orden definido por los libros y evitar claves duplicadas según ese criterio.
+💡 **Pista**: la estructura debe permitir mantener el orden definido por los libros y evitar claves duplicadas según el criterio.
 
 ---
 
 ## 📌 Instrucciones
 
-1. Implementa correctamente ambos métodos en la clase `LibroController`.
-2. Ejecuta los tests provistos en los archivos:
-
-   * `test.LibroControllerTestSet`
-   * `test.LibroControllerTestMap`
-3. Compara los resultados y argumenta cuál implementación es más eficiente o adecuada según el caso de uso.
-4. Sube el proyecto a tu repositorio y asegúrate de que el CI calcule la nota correctamente.
+1. Clona el repositorio del proyecto desde GitHub.
+2. Sube el proyecto a tu repositorio personal y el enlace al AVAC.
+3. Implementa correctamente el método en la clase `LibroController`.
+4. Sube el proyecto a tu repositorio correctamente.
 
 ---
 
@@ -74,12 +63,8 @@ Recuerda que cada test aprobado sumará a tu nota final.
 
 | Criterio                             | Puntos    |
 | ------------------------------------ | --------- |
-| `procesarConTreeSet` funcional       | 5.0       |
-| `procesarConTreeMap` funcional       | 5.0       |
+| `procesarLibros` funcional           | 10.0      |
 | Tests ejecutan sin errores           | Requisito |
 | Nota final calculada automáticamente | -         |
 
----
-
-¿Dudas? Consulta con tu docente o revisa la documentación de Java sobre [TreeSet](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html) y [TreeMap](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html).
-
+DEBERA EJECUTAR PRUEBAS DESDE APP.
