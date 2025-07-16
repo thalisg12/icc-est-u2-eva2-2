@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.util.Objects;
 
@@ -49,7 +49,7 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(titulo, anio); // Solo título y año
+        return Objects.hash(titulo, anio);
     }
 
     @Override

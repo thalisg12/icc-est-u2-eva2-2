@@ -1,9 +1,10 @@
-package Controllers;
+package controllers;
 
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import Models.Book;
+
+import models.Book;
 
 public class LibroController {
     public Map<Book, Book> procesarLibros(List<Book> libros) {
