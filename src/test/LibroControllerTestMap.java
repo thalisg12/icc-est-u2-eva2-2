@@ -1,7 +1,7 @@
 package test;
 
-import controllers.LibroController;
-import models.Book;
+import Controllers.LibroController;
+import Models.Book;
 import validaciones.ValidacionesLibro;
 
 import org.junit.jupiter.api.Test;
