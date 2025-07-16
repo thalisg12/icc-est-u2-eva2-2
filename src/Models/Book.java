@@ -27,26 +27,29 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
-        int cmpTitulo = o.titulo.compareTo(this.titulo);
-        if (cmpTitulo == 0) {
-            return Integer.compare(this.anio, o.anio);
-        }
-        return cmpTitulo;
+        // Título descendente
+        int compTitulo = o.titulo.compareTo(this.titulo);
+        if (compTitulo != 0)
+            return compTitulo;
+
+        // Año ascendente
+        int compAnio = Integer.compare(this.anio, o.anio);
+        return compAnio;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
+    public boolean equals(Object o) {
+        if (this == o)
             return true;
-        if (!(obj instanceof Book))
+        if (!(o instanceof Book))
             return false;
-        Book other = (Book) obj;
-        return this.anio == other.anio && this.titulo.equals(other.titulo);
+        Book book = (Book) o;
+        return anio == book.anio && titulo.equals(book.titulo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titulo, anio);
+        return Objects.hash(titulo, anio); // Solo título y año
     }
 
     @Override

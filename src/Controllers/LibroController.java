@@ -1,23 +1,16 @@
 package Controllers;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-
+import java.util.TreeMap;
 import Models.Book;
 
 public class LibroController {
     public Map<Book, Book> procesarLibros(List<Book> libros) {
-        Set<Book> setOrdenadoSinDuplicados = new TreeSet<>(libros);
-
-        Map<Book, Book> resultado = new LinkedHashMap<>();
-        for (Book libro : setOrdenadoSinDuplicados) {
-            resultado.put(libro, libro);
+        Map<Book, Book> resultado = new TreeMap<>();
+        for (Book libro : libros) {
+            resultado.putIfAbsent(libro, libro); // Evita duplicados según equals/hashCode
         }
-
         return resultado;
     }
-
 }
